@@ -1,0 +1,14 @@
+prefix=./_install
+exec_prefix=${prefix}
+libdir=./_install/lib
+includedir=./_install/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 59.8.101
+Requires: libavfilter >= 8.50.100, libswscale >= 6.8.112, libavformat >= 59.34.101, libavcodec >= 59.52.102, libswresample >= 4.9.100, libavutil >= 57.42.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice -lm -latomic
+Libs.private: 
+Cflags: -I${includedir}
